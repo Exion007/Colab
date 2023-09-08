@@ -1,0 +1,35 @@
+1. Start Zookeeper
+
+C:\kafka\bin\windows\zookeeper-server-start.bat C:\kafka\config\zookeeper.properties
+
+----------------------------------------------
+
+2. Run Kafka Server
+
+C:\kafka\bin\windows\kafka-server-start.bat C:\kafka\config\server.properties
+
+----------------------------------------------
+
+3. Create a Kafka Topic
+
+C:\kafka\bin\windows\kafka-topics.bat --create --topic test --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1
+
+----------------------------------------------
+
+4. Create Kafka Producer
+
+C:\kafka\bin\windows\kafka-console-producer.bat --topic inputs --bootstrap-server localhost:9092
+
+----------------------------------------------
+
+5. Create Kafka Consumer
+
+C:\kafka\bin\windows\kafka-console-consumer.bat --topic inputs --bootstrap-server localhost:9092
+
+----------------------------------------------
+
+Deleting a Topic
+
+C:\kafka\bin\windows\kafka-topics.bat --bootstrap-server --localhost:9092 --topic test --delete
+
+----------------------------------------------
